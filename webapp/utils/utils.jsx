@@ -69,7 +69,9 @@ export function isMobileApp() {
     const isApi = userAgent.indexOf('Mattermost') !== -1;
     const isShim = userAgent.indexOf('iPhone') !== -1 && userAgent.indexOf('Safari') === -1 && userAgent.indexOf('Chrome') === -1;
 
-    return isApi || isShim;
+    const isDesktopApp = userAgent.indexOf('Electron') !== -1;
+
+    return !isDesktopApp && (isApi || isShim);
 }
 
 export function isInRole(roles, inRole) {
