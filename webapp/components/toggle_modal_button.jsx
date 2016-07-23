@@ -54,7 +54,6 @@ export default class ModalToggleButton extends React.Component {
         return (
             <a
                 {...props}
-                href='#'
                 onClick={clickHandler}
             >
                 {children}

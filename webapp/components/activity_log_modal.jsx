@@ -194,7 +194,6 @@ export default class ActivityLogModal extends React.Component {
                 moreInfo = (
                     <a
                         className='theme'
-                        href='#'
                         onClick={this.handleMoreInfo.bind(this, i)}
                     >
                         <FormattedMessage

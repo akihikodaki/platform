@@ -102,7 +102,7 @@ export default class Navbar extends React.Component {
         Client.leaveChannel(this.state.channel.id,
             () => {
                 AsyncClient.getChannels(true);
-                browserHistory.push(TeamStore.getCurrentTeamUrl() + '/channels/town-square');
+                browserHistory.push(TeamStore.getCurrentTeamRelativeUrl() + '/channels/town-square');
             },
             (err) => {
                 AsyncClient.dispatchError(err, 'handleLeave');
@@ -246,7 +246,6 @@ export default class Navbar extends React.Component {
                     <li role='presentation'>
                         <a
                             role='menuitem'
-                            href='#'
                             onClick={this.showEditChannelHeaderModal}
                         >
                             <FormattedMessage
@@ -293,7 +292,6 @@ export default class Navbar extends React.Component {
                             <li role='presentation'>
                                 <a
                                     role='menuitem'
-                                    href='#'
                                     onClick={() => this.setState({showMembersModal: true})}
                                 >
                                     <FormattedMessage
@@ -330,7 +328,6 @@ export default class Navbar extends React.Component {
                         <li role='presentation'>
                             <a
                                 role='menuitem'
-                                href='#'
                                 onClick={this.showEditChannelHeaderModal}
                             >
                                 <FormattedMessage
@@ -348,7 +345,6 @@ export default class Navbar extends React.Component {
                         <li role='presentation'>
                             <a
                                 role='menuitem'
-                                href='#'
                                 onClick={() => this.setState({showEditChannelPurposeModal: true})}
                             >
                                 <FormattedMessage
@@ -366,7 +362,6 @@ export default class Navbar extends React.Component {
                         <li role='presentation'>
                             <a
                                 role='menuitem'
-                                href='#'
                                 onClick={this.showRenameChannelModal}
                             >
                                 <FormattedMessage
@@ -409,7 +404,6 @@ export default class Navbar extends React.Component {
                         <li role='presentation'>
                             <a
                                 role='menuitem'
-                                href='#'
                                 onClick={this.handleLeave}
                             >
                                 <FormattedMessage
@@ -439,7 +433,6 @@ export default class Navbar extends React.Component {
                             <div className='description info-popover'/>
                         </OverlayTrigger>
                         <a
-                            href='#'
                             className='dropdown-toggle theme'
                             type='button'
                             data-toggle='dropdown'
@@ -613,7 +606,6 @@ export default class Navbar extends React.Component {
             if (channel.header.length === 0) {
                 const link = (
                     <a
-                        href='#'
                         onClick={this.showEditChannelHeaderModal}
                     >
                         <FormattedMessage

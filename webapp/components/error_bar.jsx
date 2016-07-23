@@ -126,7 +126,6 @@ export default class ErrorBar extends React.Component {
             <div className={errClass}>
                 <span>{message}</span>
                 <a
-                    href='#'
                     className='error-bar__close'
                     onClick={this.handleClose}
                 >

@@ -176,7 +176,6 @@ export default class ChannelMembersModal extends React.Component {
                         </Modal.Title>
                         <a
                             className='btn btn-md btn-primary'
-                            href='#'
                             onClick={() => {
                                 this.setState({showInviteModal: true});
                                 this.props.onModalDismissed();

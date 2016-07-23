@@ -122,7 +122,6 @@ export default class InstalledCommand extends React.Component {
                 </div>
                 <div className='item-actions'>
                     <a
-                        href='#'
                         onClick={this.handleRegenToken}
                     >
                         <FormattedMessage
@@ -132,7 +131,6 @@ export default class InstalledCommand extends React.Component {
                     </a>
                     {' - '}
                     <a
-                        href='#'
                         onClick={this.handleDelete}
                     >
                         <FormattedMessage

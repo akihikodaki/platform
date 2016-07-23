@@ -478,7 +478,6 @@ export default class PostList extends React.Component {
                 <a
                     ref='loadmoretop'
                     className='more-messages-text theme'
-                    href='#'
                     onClick={this.loadMorePostsTop}
                 >
                     <FormattedMessage
@@ -498,7 +497,6 @@ export default class PostList extends React.Component {
                 <a
                     ref='loadmorebottom'
                     className='more-messages-text theme'
-                    href='#'
                     onClick={this.loadMorePostsBottom}
                 >
                     <FormattedMessage id='posts_view.loadMore'/>

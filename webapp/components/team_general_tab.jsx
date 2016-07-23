@@ -364,7 +364,6 @@ class GeneralTab extends React.Component {
                             />
                             <div className='padding-top x2'>
                                 <a
-                                    href='#'
                                     onClick={this.handleGenerateInviteId}
                                 >
                                     <FormattedMessage

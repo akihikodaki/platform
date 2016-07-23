@@ -624,7 +624,6 @@ class UserSettingsGeneralTab extends React.Component {
 
                 const notifLink = (
                     <a
-                        href='#'
                         onClick={notifClick.bind(this)}
                     >
                         <FormattedMessage

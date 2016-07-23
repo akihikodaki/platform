@@ -11,12 +11,6 @@ const ActionTypes = Constants.ActionTypes;
 const CHANGE_EVENT = 'change';
 
 var Utils;
-function getWindowLocationOrigin() {
-    if (!Utils) {
-        Utils = require('utils/utils.jsx'); //eslint-disable-line global-require
-    }
-    return Utils.getWindowLocationOrigin();
-}
 
 class TeamStoreClass extends EventEmitter {
     constructor() {
@@ -87,7 +81,7 @@ class TeamStoreClass extends EventEmitter {
 
     getCurrentTeamUrl() {
         if (this.getCurrent()) {
-            return getWindowLocationOrigin() + '/' + this.getCurrent().name;
+            return document.baseURI + this.getCurrent().name;
         }
         return null;
     }
@@ -103,7 +97,7 @@ class TeamStoreClass extends EventEmitter {
         const current = this.getCurrent();
 
         if (current) {
-            return getWindowLocationOrigin() + '/signup_user_complete/?id=' + current.invite_id;
+            return document.baseURI + 'signup_user_complete/?id=' + current.invite_id;
         }
 
         return '';
@@ -112,7 +106,16 @@ class TeamStoreClass extends EventEmitter {
     getTeamUrl(id) {
         const team = this.get(id);
         if (team) {
-            return getWindowLocationOrigin() + '/' + team.name;
+            return document.baseURI + team.name;
+        }
+
+        return null;
+    }
+
+    getTeamRelativeUrl(id) {
+        const team = this.get(id);
+        if (team) {
+            return '/' + team.name;
         }
 
         return null;

@@ -91,7 +91,6 @@ export default class TutorialTip extends React.Component {
 
                 dots.push(
                     <a
-                        href='#'
                         key={'dotactive' + i}
                         className={className}
                         onClick={(e) => { //eslint-disable-line no-loop-func
@@ -149,7 +148,6 @@ export default class TutorialTip extends React.Component {
                                         defaultMessage='Seen this before? '
                                     />
                                     <a
-                                        href='#'
                                         onClick={this.skipTutorial}
                                     >
                                         <FormattedMessage

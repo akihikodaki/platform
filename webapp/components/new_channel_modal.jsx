@@ -120,7 +120,6 @@ class NewChannelModal extends React.Component {
 
         let createPublicChannelLink = (
             <a
-                href='#'
                 onClick={this.props.onTypeSwitched}
             >
                 <FormattedMessage
@@ -132,7 +131,6 @@ class NewChannelModal extends React.Component {
 
         let createPrivateChannelLink = (
             <a
-                href='#'
                 onClick={this.props.onTypeSwitched}
             >
                 <FormattedMessage
@@ -247,7 +245,6 @@ class NewChannelModal extends React.Component {
                                     <p className='input__help dark'>
                                         {'URL: ' + prettyTeamURL + this.props.channelData.name + ' ('}
                                         <a
-                                            href='#'
                                             onClick={this.props.onChangeURLPressed}
                                         >
                                             <FormattedMessage

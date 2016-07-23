@@ -119,7 +119,6 @@ export default class AdminSidebar extends React.Component {
                     overlay={addTeamTooltip}
                 >
                     <a
-                        href='#'
                         onClick={this.showTeamSelect}
                     >
                         <i

@@ -4,8 +4,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 const NPM_TARGET = process.env.npm_lifecycle_event; //eslint-disable-line no-process-env
 
 var DEV = false;
@@ -24,11 +22,11 @@ if (NPM_TARGET === 'test') {
 }
 
 var config = {
-    entry: ['babel-polyfill', './root.jsx', 'root.html'],
+    entry: ['path.jsx', 'babel-polyfill', './root.jsx'],
     output: {
         path: 'dist',
-        publicPath: '/static/',
-        filename: '[name].[hash].js',
+        publicPath: '',
+        filename: '[name].js',
         chunkFilename: '[name].[chunkhash].js'
     },
     module: {
@@ -74,10 +72,6 @@ var config = {
                     'file?name=files/[hash].[ext]',
                     'image-webpack'
                 ]
-            },
-            {
-                test: /\.html$/,
-                loader: 'html?attrs=link:href'
             }
         ]
     },
@@ -89,6 +83,7 @@ var config = {
             'window.jQuery': 'jquery'
         }),
         new CopyWebpackPlugin([
+            {from: 'config', to: 'config'},
             {from: 'images/emoji', to: 'emoji'},
             {from: 'images/logo-email.png', to: 'images'},
             {from: 'images/circles.png', to: 'images'},
@@ -102,10 +97,6 @@ var config = {
             'process.env': {
                 NODE_ENV: JSON.stringify('production')
             }
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            minChunks: 2,
-            children: true
         })
     ],
     resolve: {
@@ -158,15 +149,6 @@ if (TEST) {
     config.entry = ['babel-polyfill', './root.jsx'];
     config.target = 'node';
     config.externals = [nodeExternals()];
-} else {
-    // For some reason this breaks mocha. So it goes here.
-    config.plugins.push(
-        new HtmlWebpackPlugin({
-            filename: 'root.html',
-            inject: 'head',
-            template: 'root.html'
-        })
-    );
 }
 
 module.exports = config;

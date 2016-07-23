@@ -266,7 +266,6 @@ export default class UserItem extends React.Component {
                 <li role='presentation'>
                     <a
                         role='menuitem'
-                        href='#'
                         onClick={this.handleMakeSystemAdmin}
                     >
                         <FormattedMessage
@@ -284,7 +283,6 @@ export default class UserItem extends React.Component {
                 <li role='presentation'>
                     <a
                         role='menuitem'
-                        href='#'
                         onClick={this.handleMakeAdmin}
                     >
                         <FormattedMessage
@@ -302,7 +300,6 @@ export default class UserItem extends React.Component {
                 <li role='presentation'>
                     <a
                         role='menuitem'
-                        href='#'
                         onClick={this.handleMakeMember}
                     >
                         <FormattedMessage
@@ -320,7 +317,6 @@ export default class UserItem extends React.Component {
                 <li role='presentation'>
                     <a
                         role='menuitem'
-                        href='#'
                         onClick={this.handleRemoveFromTeam}
                     >
                         <FormattedMessage
@@ -338,7 +334,6 @@ export default class UserItem extends React.Component {
                 <li role='presentation'>
                     <a
                         role='menuitem'
-                        href='#'
                         onClick={this.handleMakeActive}
                     >
                         <FormattedMessage
@@ -356,7 +351,6 @@ export default class UserItem extends React.Component {
                 <li role='presentation'>
                     <a
                         role='menuitem'
-                        href='#'
                         onClick={this.handleMakeNotActive}
                     >
                         <FormattedMessage
@@ -374,7 +368,6 @@ export default class UserItem extends React.Component {
                 <li role='presentation'>
                     <a
                         role='menuitem'
-                        href='#'
                         onClick={this.handleResetMfa}
                     >
                         <FormattedMessage
@@ -423,7 +416,6 @@ export default class UserItem extends React.Component {
                 <li role='presentation'>
                     <a
                         role='menuitem'
-                        href='#'
                         onClick={this.handleResetPassword}
                     >
                         <FormattedMessage
@@ -445,7 +437,6 @@ export default class UserItem extends React.Component {
                 <li role='presentation'>
                     <a
                         role='menuitem'
-                        href='#'
                         onClick={this.handleResetPassword}
                     >
                         <FormattedMessage
@@ -535,7 +526,6 @@ export default class UserItem extends React.Component {
                 <div className='more-modal__actions'>
                     <div className='dropdown member-drop'>
                         <a
-                            href='#'
                             className='dropdown-toggle theme'
                             type='button'
                             data-toggle='dropdown'

@@ -1109,7 +1109,7 @@ func TestGetChannelExtraInfo(t *testing.T) {
 		currentEtag = cache_result.Etag
 	}
 
-	Client2 := model.NewClient("http://localhost" + utils.Cfg.ServiceSettings.ListenAddress)
+	Client2 := model.NewClient("http://localhost" + utils.Cfg.ServiceSettings.ListenAddress + utils.Cfg.ServiceSettings.Path)
 
 	user2 := &model.User{Email: "success+" + model.NewId() + "@simulator.amazonses.com", Nickname: "Tester 2", Password: "passwd1"}
 	user2 = Client2.Must(Client2.CreateUser(user2, "")).Data.(*model.User)

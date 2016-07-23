@@ -32,8 +32,8 @@ import loadingGif from 'images/load.gif';
 import React from 'react';
 import {browserHistory, Link} from 'react-router/es6';
 
-import favicon from 'images/favicon/favicon-16x16.png';
-import redFavicon from 'images/favicon/redfavicon-16x16.png';
+const favicon = __webpack_public_path__ + 'images/favicon/favicon-16x16.png';
+const redFavicon = __webpack_public_path__ + 'images/favicon/redfavicon-16x16.png';
 
 export default class Sidebar extends React.Component {
     constructor(props) {
@@ -639,7 +639,6 @@ export default class Sidebar extends React.Component {
         var directMessageMore = (
             <li key='more'>
                 <a
-                    href='#'
                     onClick={this.showMoreDirectChannelsModal}
                 >
                     <FormattedMessage
@@ -697,7 +696,6 @@ export default class Sidebar extends React.Component {
             >
                 <a
                     className='add-channel-btn'
-                    href='#'
                     onClick={this.showNewChannelModal.bind(this, Constants.OPEN_CHANNEL)}
                 >
                     {'+'}
@@ -713,7 +711,6 @@ export default class Sidebar extends React.Component {
             >
                 <a
                     className='add-channel-btn'
-                    href='#'
                     onClick={this.showNewChannelModal.bind(this, Constants.PRIVATE_CHANNEL)}
                 >
                     {'+'}
@@ -787,7 +784,6 @@ export default class Sidebar extends React.Component {
                         {publicChannelItems}
                         <li>
                             <a
-                                href='#'
                                 className='nav-more'
                                 onClick={this.showMoreChannelsModal}
                             >

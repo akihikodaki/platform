@@ -100,11 +100,11 @@ func (me *TestHelper) InitSystemAdmin() *TestHelper {
 }
 
 func (me *TestHelper) CreateClient() *model.Client {
-	return model.NewClient("http://localhost" + utils.Cfg.ServiceSettings.ListenAddress)
+	return model.NewClient("http://localhost" + utils.Cfg.ServiceSettings.ListenAddress + utils.Cfg.ServiceSettings.Path)
 }
 
 func (me *TestHelper) CreateWebSocketClient() (*model.WebSocketClient, *model.AppError) {
-	return model.NewWebSocketClient("ws://localhost"+utils.Cfg.ServiceSettings.ListenAddress, me.BasicClient.AuthToken)
+	return model.NewWebSocketClient("ws://localhost"+utils.Cfg.ServiceSettings.ListenAddress+utils.Cfg.ServiceSettings.Path, me.BasicClient.AuthToken)
 }
 
 func (me *TestHelper) CreateTeam(client *model.Client) *model.Team {

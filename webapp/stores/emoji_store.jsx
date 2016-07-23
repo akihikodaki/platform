@@ -2,6 +2,7 @@
 // See License.txt for license information.
 
 import AppDispatcher from '../dispatcher/app_dispatcher.jsx';
+import Client from '../client/web_client.jsx';
 import Constants from 'utils/constants.jsx';
 import EventEmitter from 'events';
 
@@ -110,8 +111,7 @@ class EmojiStore extends EventEmitter {
 
     getEmojiImageUrl(emoji) {
         if (emoji.id) {
-            // must match Client.getCustomEmojiImageUrl
-            return `/api/v3/emoji/${emoji.id}`;
+            return Client.getCustomEmojiImageUrl(emoji.id);
         }
 
         const filename = emoji.unicode || emoji.filename || emoji.name;

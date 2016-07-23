@@ -88,7 +88,6 @@ export default class AdminNavbarDropdown extends React.Component {
                     className='dropdown'
                 >
                     <a
-                        href='#'
                         className='dropdown-toggle'
                         data-toggle='dropdown'
                         role='button'
@@ -121,7 +120,6 @@ export default class AdminNavbarDropdown extends React.Component {
                         ></li>
                         <li>
                             <a
-                                href='#'
                                 onClick={GlobalActions.emitUserLoggedOutEvent}
                             >
                                 <FormattedMessage

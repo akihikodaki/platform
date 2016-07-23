@@ -157,7 +157,7 @@ function autolinkAtMentions(text, tokens) {
         const alias = `MM_ATMENTION${index}`;
 
         tokens.set(alias, {
-            value: `<a class='mention-link' href='#' data-mention='${username}'>${mention}</a>`,
+            value: `<a class='mention-link' data-mention='${username}'>${mention}</a>`,
             originalText: mention
         });
         return alias;
@@ -262,7 +262,7 @@ function autolinkHashtags(text, tokens) {
             const newAlias = `MM_HASHTAG${index}`;
 
             newTokens.set(newAlias, {
-                value: `<a class='mention-link' href='#' data-hashtag='${token.originalText}'>${token.originalText}</a>`,
+                value: `<a class='mention-link' data-hashtag='${token.originalText}'>${token.originalText}</a>`,
                 originalText: token.originalText,
                 hashtag: token.originalText.substring(1)
             });
@@ -287,7 +287,7 @@ function autolinkHashtags(text, tokens) {
         }
 
         tokens.set(alias, {
-            value: `<a class='mention-link' href='#' data-hashtag='${originalText}'>${originalText}</a>`,
+            value: `<a class='mention-link' data-hashtag='${originalText}'>${originalText}</a>`,
             originalText,
             hashtag: originalText.substring(1)
         });

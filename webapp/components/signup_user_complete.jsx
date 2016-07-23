@@ -723,9 +723,16 @@ export default class SignupUserComplete extends React.Component {
                 <p>
                     <FormattedHTMLMessage
                         id='create_team.agreement'
-                        defaultMessage="By proceeding to create your account and use {siteName}, you agree to our <a href='/static/help/terms.html'>Terms of Service</a> and <a href='/static/help/privacy.html'>Privacy Policy</a>. If you do not agree, you cannot use {siteName}."
+                        defaultMessage='By proceeding to create your account and use {siteName}, you agree to our <a href={terms}>Terms of Service</a> and <a href={privacy}>Privacy Policy</a>. If you do not agree, you cannot use {siteName}.'
                         values={{
-                            siteName: global.window.mm_config.SiteName
+                            siteName: global.window.mm_config.SiteName,
+
+                            /* eslint-disable camelcase, no-undef */
+
+                            terms: "'" + __webpack_public_path__ + "help/terms.html'",
+                            privacy: "'" + __webpack_public_path__ + "help/privacy.html'"
+
+                            /* eslint-enable */
                         }}
                     />
                 </p>

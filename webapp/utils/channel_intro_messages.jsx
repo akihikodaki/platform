@@ -104,7 +104,6 @@ export function createDefaultIntroMessage(channel, centeredIntro) {
     let inviteModalLink = (
         <a
             className='intro-links'
-            href='#'
             onClick={GlobalActions.showGetTeamInviteLinkModal}
         >
             <i className='fa fa-user-plus'></i>

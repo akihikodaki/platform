@@ -201,7 +201,6 @@ class FileAttachment extends React.Component {
                     overlay={<Tooltip id='file-name__tooltip'>{filenameString}</Tooltip>}
                 >
                     <a
-                        href='#'
                         onClick={this.onAttachmentClick}
                         className='post-image__name'
                         rel='noopener noreferrer'
@@ -223,7 +222,6 @@ class FileAttachment extends React.Component {
             >
                 <a
                     className='post-image__thumbnail'
-                    href='#'
                     onClick={this.onAttachmentClick}
                 >
                     {thumbnail}

@@ -133,7 +133,6 @@ export default class SettingPicture extends React.Component {
                             {confirmButton}
                             <a
                                 className='btn btn-sm theme'
-                                href='#'
                                 onClick={self.props.updateSection}
                             >
                                 <FormattedMessage

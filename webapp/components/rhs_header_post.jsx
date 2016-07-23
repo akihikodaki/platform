@@ -87,7 +87,6 @@ export default class RhsHeaderPost extends React.Component {
         if (this.props.fromSearch) {
             back = (
                 <a
-                    href='#'
                     onClick={this.handleBack}
                     className='sidebar--right__back'
                 >

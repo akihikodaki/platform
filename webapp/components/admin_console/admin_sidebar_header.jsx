@@ -50,7 +50,6 @@ export default class SidebarHeader extends React.Component {
         return (
             <div className='team__header theme'>
                 <a
-                    href='#'
                     onClick={this.toggleDropdown}
                 >
                     {profilePicture}

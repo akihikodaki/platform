@@ -205,7 +205,7 @@ class BrowserStoreClass {
             sessionStorage.removeItem('__testSession__');
         } catch (e) {
             // Session storage not usable, website is unusable
-            browserHistory.push(window.location.origin + '/error?title=' + notSupportedParams.title + '&message=' + notSupportedParams.message);
+            browserHistory.push('/error?title=' + notSupportedParams.title + '&message=' + notSupportedParams.message);
         }
 
         return this.checkedLocalStorageSupported;

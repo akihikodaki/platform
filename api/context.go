@@ -140,7 +140,7 @@ func (h handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 
 	protocol := GetProtocol(r)
-	c.SetSiteURL(protocol + "://" + r.Host)
+	c.SetSiteURL(protocol + "://" + r.Host + utils.Cfg.ServiceSettings.Path)
 
 	w.Header().Set(model.HEADER_REQUEST_ID, c.RequestId)
 	w.Header().Set(model.HEADER_VERSION_ID, fmt.Sprintf("%v.%v", model.CurrentVersion, utils.CfgLastModified))
@@ -179,8 +179,8 @@ func (h handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		c.setTeamURL(c.GetSiteURL(), false)
 		c.Path = r.URL.Path
 	} else {
-		splitURL := strings.Split(r.URL.Path, "/")
-		c.setTeamURL(protocol+"://"+r.Host+"/"+splitURL[1], true)
+		splitURL := strings.Split(r.URL.Path[len(utils.Cfg.ServiceSettings.Path):], "/")
+		c.setTeamURL(protocol+"://"+r.Host+utils.Cfg.ServiceSettings.Path+"/"+splitURL[1], true)
 		c.Path = "/" + strings.Join(splitURL[2:], "/")
 	}
 

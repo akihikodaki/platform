@@ -156,7 +156,6 @@ export default class SidebarRightMenu extends React.Component {
             inviteLink = (
                 <li>
                     <a
-                        href='#'
                         onClick={GlobalActions.showInviteMemberModal}
                     >
                         <i className='icon fa fa-user-plus'></i>
@@ -172,7 +171,6 @@ export default class SidebarRightMenu extends React.Component {
                 teamLink = (
                     <li>
                         <a
-                            href='#'
                             onClick={GlobalActions.showGetTeamInviteLinkModal}
                         >
                             <i className='icon fa fa-link'></i>
@@ -200,7 +198,6 @@ export default class SidebarRightMenu extends React.Component {
             teamSettingsLink = (
                 <li>
                     <a
-                        href='#'
                         data-toggle='modal'
                         data-target='#team_settings'
                     >
@@ -314,7 +311,6 @@ export default class SidebarRightMenu extends React.Component {
                     <ul className='nav nav-pills nav-stacked'>
                         <li>
                             <a
-                                href='#'
                                 onClick={this.searchMentions}
                             >
                                 <i className='icon mentions'>{'@'}</i>
@@ -326,7 +322,6 @@ export default class SidebarRightMenu extends React.Component {
                         </li>
                         <li>
                             <a
-                                href='#'
                                 onClick={() => this.setState({showUserSettingsModal: true})}
                             >
                                 <i className='icon fa fa-cog'></i>
@@ -353,7 +348,6 @@ export default class SidebarRightMenu extends React.Component {
                         <li className='divider'></li>
                         <li>
                             <a
-                                href='#'
                                 onClick={GlobalActions.emitUserLoggedOutEvent}
                             >
                                 <i className='icon fa fa-sign-out'></i>
@@ -368,7 +362,6 @@ export default class SidebarRightMenu extends React.Component {
                         {reportLink}
                         <li>
                             <a
-                                href='#'
                                 onClick={this.handleAboutModal}
                             >
                                 <i className='icon fa fa-info'></i>

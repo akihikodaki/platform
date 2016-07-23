@@ -70,7 +70,6 @@ export default class PopoverListMembers extends React.Component {
                 if (currentUserId !== m.id && this.props.channel.type !== 'D') {
                     button = (
                         <a
-                            href='#'
                             className='btn-message'
                             onClick={(e) => this.handleShowDirectChannel(m, e)}
                         >

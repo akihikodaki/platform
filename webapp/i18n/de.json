@@ -949,7 +949,7 @@
   "create_post.post": "Senden",
   "create_post.tutorialTip": "<h4>Nachrichten senden</h4><p>Geben Sie hier Ihre Nachricht ein und drücken Sie <strong>Enter</strong> um sie senden.</p><p>Klicken Sie den <strong>Anhang</strong> Button um ein Bild oder eine Datei hochzuladen.</p>",
   "create_post.write": "Schreiben Sie eine Nachricht...",
-  "create_team.agreement": "Wenn Sie die Erstellung Ihres Accounts fortsetzen und {siteName} nutzen, verstehen Sie sich mit unseren <a href='/static/help/terms.html'>Nutzungsbedingungen</a> und <a href='/static/help/privacy.html'>Datenschutzbedingungen</a> einverstanden. Wenn Sie nicht zustimmen, dürfen Sie {siteName} nicht nutzen.",
+  "create_team.agreement": "Wenn Sie die Erstellung Ihres Accounts fortsetzen und {siteName} nutzen, verstehen Sie sich mit unseren <a href={terms}>Nutzungsbedingungen</a> und <a href={privacy}>Datenschutzbedingungen</a> einverstanden. Wenn Sie nicht zustimmen, dürfen Sie {siteName} nicht nutzen.",
   "create_team.display_name.back": "Zurück zum vorherigem Schritt",
   "create_team.display_name.charLength": "Der Name muss zwischen 4 und 15 Zeichen enthalten",
   "create_team.display_name.nameHelp": "Benennen Sie Ihr Team in jeglicher Sprache. Ihr Teamname wird in Menüs und Überschriften angezeigt.",

@@ -97,7 +97,7 @@ export default class InstalledIncomingWebhook extends React.Component {
                                 id='installed_integrations.url'
                                 defaultMessage='URL: {url}'
                                 values={{
-                                    url: Utils.getWindowLocationOrigin() + '/hooks/' + incomingWebhook.id
+                                    url: document.baseURI + 'hooks/' + incomingWebhook.id
                                 }}
                             />
                         </span>
@@ -117,7 +117,6 @@ export default class InstalledIncomingWebhook extends React.Component {
                 </div>
                 <div className='item-actions'>
                     <a
-                        href='#'
                         onClick={this.handleDelete}
                     >
                         <FormattedMessage

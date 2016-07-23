@@ -279,7 +279,6 @@ class ViewImageModal extends React.Component {
                 <a
                     ref='previewArrowLeft'
                     className='modal-prev-bar'
-                    href='#'
                     onClick={this.handlePrev}
                 >
                     <i className='image-control image-prev'/>
@@ -290,7 +289,6 @@ class ViewImageModal extends React.Component {
                 <a
                     ref='previewArrowRight'
                     className='modal-next-bar'
-                    href='#'
                     onClick={this.handleNext}
                 >
                     <i className='image-control image-next'/>

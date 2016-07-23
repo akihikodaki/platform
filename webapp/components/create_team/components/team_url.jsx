@@ -105,7 +105,7 @@ export default class TeamUrl extends React.Component {
             nameDivClass += ' has-error';
         }
 
-        const title = `${Utils.getWindowLocationOrigin()}/`;
+        const title = document.baseURI;
         const urlTooltip = (
             <Tooltip id='urlTooltip'>{title}</Tooltip>
         );
@@ -194,7 +194,6 @@ export default class TeamUrl extends React.Component {
                     </div>
                     <div className='margin--extra'>
                         <a
-                            href='#'
                             onClick={this.submitBack}
                         >
                             <FormattedMessage

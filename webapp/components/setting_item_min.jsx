@@ -13,7 +13,6 @@ export default class SettingItemMin extends React.Component {
                 <li className='col-sm-3 section-edit'>
                     <a
                         className='theme'
-                        href='#'
                         onClick={this.props.updateSection}
                     >
                         <i className='fa fa-pencil'/>

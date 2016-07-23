@@ -76,5 +76,9 @@ func root(c *api.Context, w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Cache-Control", "no-cache, max-age=31556926, public")
-	http.ServeFile(w, r, utils.FindDir(CLIENT_DIR)+"root.html")
+	page := utils.NewHTMLTemplate("root", c.Locale)
+	page.Props["Path"] = utils.Cfg.ServiceSettings.Path
+	if err := page.RenderToWriter(w); err != nil {
+		c.SetUnknownError(page.TemplateName, err.Error())
+	}
 }

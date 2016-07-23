@@ -11,6 +11,7 @@ import * as GlobalActions from 'actions/global_actions.jsx';
 import * as Websockets from 'actions/websocket_actions.jsx';
 import BrowserStore from 'stores/browser_store.jsx';
 import * as I18n from 'i18n/i18n.jsx';
+import Client from 'client/web_client.jsx';
 
 // Import our styles
 import 'bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css';
@@ -29,7 +30,7 @@ function preRenderSetup(callwhendone) {
         l.message = 'msg: ' + msg + ' row: ' + line + ' col: ' + column + ' stack: ' + stack + ' url: ' + url;
 
         $.ajax({
-            url: '/api/v3/general/log_client',
+            url: window.mm_path + '/api/v3/general/log_client',
             dataType: 'json',
             contentType: 'application/json',
             type: 'POST',
@@ -83,6 +84,8 @@ function renderRootComponent() {
 }
 
 global.window.setup_root = () => {
+    Client.setUrl(window.mm_path);
+
     // Do the pre-render setup and call renderRootComponent when done
     preRenderSetup(renderRootComponent);
 };

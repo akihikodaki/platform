@@ -84,7 +84,6 @@ export default class EmojiListItem extends React.Component {
         if (this.props.onDelete) {
             deleteButton = (
                 <a
-                    href='#'
                     onClick={this.handleDelete}
                 >
                     <FormattedMessage

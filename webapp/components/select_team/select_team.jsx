@@ -217,7 +217,6 @@ export default class SelectTeam extends React.Component {
                 <ErrorBar/>
                 <div className='signup-header'>
                     <a
-                        href='#'
                         onClick={GlobalActions.emitUserLoggedOutEvent}
                     >
                         <span className='fa fa-chevron-left'/>

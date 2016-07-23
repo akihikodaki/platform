@@ -151,7 +151,7 @@ export default class SearchResultsItem extends React.Component {
                                                     this.hideSidebar();
                                                 }
                                                 this.shrinkSidebar();
-                                                browserHistory.push('/' + window.location.pathname.split('/')[1] + '/pl/' + post.id);
+                                                browserHistory.push('/' + window.location.pathname.slice(global.window.mm_path.length).split('/')[1] + '/pl/' + post.id);
                                             }
                                         }
                                         className='search-item__jump'
@@ -164,7 +164,6 @@ export default class SearchResultsItem extends React.Component {
                                 </li>
                                 <li>
                                     <a
-                                        href='#'
                                         className='comment-icon__container search-item__comment'
                                         onClick={this.handleFocusRHSClick}
                                     >

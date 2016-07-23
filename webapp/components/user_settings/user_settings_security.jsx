@@ -204,7 +204,6 @@ class SecurityTab extends React.Component {
                     <div key='mfaQrCode'>
                         <a
                             className='btn btn-primary'
-                            href='#'
                             onClick={this.deactivateMfa}
                         >
                             <FormattedMessage
@@ -276,7 +275,6 @@ class SecurityTab extends React.Component {
                     <div key='mfaQrCode'>
                         <a
                             className='btn btn-primary'
-                            href='#'
                             onClick={this.showQrCode}
                         >
                             <FormattedMessage

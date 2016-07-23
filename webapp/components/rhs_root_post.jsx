@@ -98,7 +98,6 @@ export default class RhsRootPost extends React.Component {
                     role='presentation'
                 >
                     <a
-                        href='#'
                         onClick={this.handlePermalink}
                     >
                         <FormattedMessage
@@ -117,7 +116,6 @@ export default class RhsRootPost extends React.Component {
                     role='presentation'
                 >
                     <a
-                        href='#'
                         role='menuitem'
                         data-toggle='modal'
                         data-target='#edit_post'
@@ -143,7 +141,6 @@ export default class RhsRootPost extends React.Component {
                     role='presentation'
                 >
                     <a
-                        href='#'
                         role='menuitem'
                         onClick={() => GlobalActions.showDeletePostModal(post, this.props.commentCount)}
                     >
@@ -161,7 +158,6 @@ export default class RhsRootPost extends React.Component {
             rootOptions = (
                 <div className='dropdown'>
                     <a
-                        href='#'
                         className='post__dropdown dropdown-toggle'
                         type='button'
                         data-toggle='dropdown'

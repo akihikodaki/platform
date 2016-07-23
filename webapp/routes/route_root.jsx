@@ -18,6 +18,9 @@ function preLoggedIn(nextState, replace, callback) {
 export default {
     path: '/',
     component: Root,
+    onEnter: () => {
+        console.log(window.location.href);
+    },
     getChildRoutes: RouteUtils.createGetChildComponentsFunction(
         [
             {

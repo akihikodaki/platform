@@ -143,11 +143,11 @@ export function notifyMe(title, body, channel, teamId) {
                     notification.onclick = () => {
                         window.focus();
                         if (channel) {
-                            browserHistory.push(TeamStore.getTeamUrl(teamId) + '/channels/' + channel.name);
+                            browserHistory.push(TeamStore.getTeamRelativeUrl(teamId) + '/channels/' + channel.name);
                         } else if (teamId) {
-                            browserHistory.push(TeamStore.getTeamUrl(teamId) + '/channels/town-square');
+                            browserHistory.push(TeamStore.getTeamRelativeUrl(teamId) + '/channels/town-square');
                         } else {
-                            browserHistory.push(TeamStore.getCurrentTeamUrl() + '/channels/town-square');
+                            browserHistory.push(TeamStore.getCurrentTeamRelativeUrl() + '/channels/town-square');
                         }
                     };
                     setTimeout(() => {
@@ -1154,15 +1154,15 @@ export function importSlack(file, success, error) {
 }
 
 export function getTeamURLFromAddressBar() {
-    return window.location.origin + '/' + window.location.pathname.split('/')[1];
+    return document.baseURI + getTeamNameFromUrl();
 }
 
 export function getTeamNameFromUrl() {
-    return window.location.pathname.split('/')[1];
+    return window.location.pathname.slice(global.window.mm_path.length).split('/')[1];
 }
 
 export function getTeamURLNoOriginFromAddressBar() {
-    return '/' + window.location.pathname.split('/')[1];
+    return '/' + getTeamNameFromUrl();
 }
 
 export function getShortenedTeamURL() {
@@ -1232,7 +1232,7 @@ export function openDirectChannelToUser(user, successCb, errorCb) {
                 );
             },
             () => {
-                browserHistory.push(TeamStore.getCurrentTeamUrl() + '/channels/' + channelName);
+                browserHistory.push(TeamStore.getCurrentTeamRelativeUrl() + '/channels/' + channelName);
                 if ($.isFunction(errorCb)) {
                     errorCb();
                 }

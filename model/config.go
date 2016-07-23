@@ -50,6 +50,7 @@ const (
 
 type ServiceSettings struct {
 	ListenAddress                     string
+	Path                              string
 	MaximumLoginAttempts              int
 	SegmentDeveloperKey               string
 	GoogleDeveloperKey                string

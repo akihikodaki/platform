@@ -61,7 +61,6 @@ export default class PostInfo extends React.Component {
                 >
                     <a
                         className='link__reply theme'
-                        href='#'
                         onClick={this.props.handleCommentClick}
                     >
                         <FormattedMessage
@@ -80,7 +79,6 @@ export default class PostInfo extends React.Component {
                     role='presentation'
                 >
                     <a
-                        href='#'
                         onClick={this.handlePermalink}
                     >
                         <FormattedMessage
@@ -99,7 +97,6 @@ export default class PostInfo extends React.Component {
                     role='presentation'
                 >
                     <a
-                        href='#'
                         role='menuitem'
                         onClick={() => GlobalActions.showDeletePostModal(post, dataComments)}
                     >
@@ -119,7 +116,6 @@ export default class PostInfo extends React.Component {
                     role='presentation'
                 >
                     <a
-                        href='#'
                         role='menuitem'
                         data-toggle='modal'
                         data-target='#edit_post'
@@ -148,7 +144,6 @@ export default class PostInfo extends React.Component {
                 id={'post_dropdown' + this.props.post.id}
             >
                 <a
-                    href='#'
                     className='dropdown-toggle post__dropdown theme'
                     type='button'
                     data-toggle='dropdown'
@@ -190,7 +185,6 @@ export default class PostInfo extends React.Component {
         if (post.state !== Constants.POST_FAILED && post.state !== Constants.POST_LOADING && !Utils.isPostEphemeral(post)) {
             comments = (
                 <a
-                    href='#'
                     className={'comment-icon__container' + showCommentClass + highlightMentionClass}
                     onClick={this.props.handleCommentClick}
                 >

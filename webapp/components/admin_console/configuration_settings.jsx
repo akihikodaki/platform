@@ -29,6 +29,7 @@ export default class ConfigurationSettings extends AdminSettings {
 
     getConfigFromState(config) {
         config.ServiceSettings.ListenAddress = this.state.listenAddress;
+        config.ServiceSettings.Path = this.state.path;
         config.ServiceSettings.WebserverMode = this.state.webserverMode;
 
         return config;
@@ -37,6 +38,7 @@ export default class ConfigurationSettings extends AdminSettings {
     getStateFromConfig(config) {
         return {
             listenAddress: config.ServiceSettings.ListenAddress,
+            path: config.ServiceSettings.Path,
             webserverMode: config.ServiceSettings.WebserverMode
         };
     }
@@ -71,6 +73,24 @@ export default class ConfigurationSettings extends AdminSettings {
                         />
                     }
                     value={this.state.listenAddress}
+                    onChange={this.handleChange}
+                />
+                <TextSetting
+                    id='path'
+                    label={
+                        <FormattedMessage
+                            id='admin.service.path'
+                            defaultMessage='Path:'
+                        />
+                    }
+                    placeholder={Utils.localizeMessage('admin.service.pathExample', 'Ex "/mattermost"')}
+                    helpText={
+                        <FormattedMessage
+                            id='admin.service.pathDescription'
+                            defaultMessage='The path of the top directory.  Changing this will require a server restart before taking effect.'
+                        />
+                    }
+                    value={this.state.path}
                     onChange={this.handleChange}
                 />
                 <WebserverModeDropdownSetting

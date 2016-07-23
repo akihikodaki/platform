@@ -120,7 +120,6 @@ export default class NavbarDropdown extends React.Component {
             inviteLink = (
                 <li>
                     <a
-                        href='#'
                         onClick={GlobalActions.showInviteMemberModal}
                     >
                         <FormattedMessage
@@ -135,7 +134,6 @@ export default class NavbarDropdown extends React.Component {
                 teamLink = (
                     <li>
                         <a
-                            href='#'
                             onClick={GlobalActions.showGetTeamInviteLinkModal}
                         >
                             <FormattedMessage
@@ -169,7 +167,6 @@ export default class NavbarDropdown extends React.Component {
             teamSettings = (
                 <li>
                     <a
-                        href='#'
                         data-toggle='modal'
                         data-target='#team_settings'
                     >
@@ -253,7 +250,6 @@ export default class NavbarDropdown extends React.Component {
         teams.push(
             <li key='leaveTeam_li'>
                 <a
-                    href='#'
                     onClick={GlobalActions.showLeaveTeamModal}
                 >
                     <FormattedMessage
@@ -339,7 +335,6 @@ export default class NavbarDropdown extends React.Component {
                     className='dropdown'
                 >
                     <a
-                        href='#'
                         className='dropdown-toggle'
                         data-toggle='dropdown'
                         role='button'
@@ -356,7 +351,6 @@ export default class NavbarDropdown extends React.Component {
                     >
                         <li>
                             <a
-                                href='#'
                                 onClick={(e) => {
                                     e.preventDefault();
                                     this.setState({showUserSettingsModal: true});
@@ -372,7 +366,6 @@ export default class NavbarDropdown extends React.Component {
                         {teamLink}
                         <li>
                             <a
-                                href='#'
                                 onClick={GlobalActions.emitUserLoggedOutEvent}
                             >
                                 <FormattedMessage
@@ -394,7 +387,6 @@ export default class NavbarDropdown extends React.Component {
                         {reportLink}
                         <li>
                             <a
-                                href='#'
                                 onClick={this.handleAboutModal}
                             >
                                 <FormattedMessage

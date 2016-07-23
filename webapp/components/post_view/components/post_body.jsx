@@ -158,7 +158,6 @@ export default class PostBody extends React.Component {
         if (this.props.post.state === Constants.POST_DELETED) {
             removeButton = (
                 <a
-                    href='#'
                     className='post__remove theme'
                     type='button'
                     onClick={this.removePost}

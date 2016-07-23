@@ -64,7 +64,6 @@ export default class PendingPostOptions extends React.Component {
         return (<span className='pending-post-actions'>
             <a
                 className='post-retry'
-                href='#'
                 onClick={this.retryPost}
             >
                 <FormattedMessage
@@ -75,7 +74,6 @@ export default class PendingPostOptions extends React.Component {
             {' - '}
             <a
                 className='post-cancel'
-                href='#'
                 onClick={this.cancelPost}
             >
                 <FormattedMessage

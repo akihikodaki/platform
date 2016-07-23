@@ -359,7 +359,6 @@ class RegisterAppModal extends React.Component {
             footer = (
                 <a
                     className={'btn btn-sm btn-primary pull-right' + btnClass}
-                    href='#'
                     onClick={(e) => {
                         e.preventDefault();
                         this.updateShow(false);

@@ -357,7 +357,6 @@ export default class ChannelHeader extends React.Component {
                         >
                             <a
                                 role='menuitem'
-                                href='#'
                                 onClick={() => this.setState({showMembersModal: true})}
                             >
                                 <FormattedMessage
@@ -375,7 +374,6 @@ export default class ChannelHeader extends React.Component {
                         >
                             <a
                                 role='menuitem'
-                                href='#'
                                 onClick={() => this.setState({showMembersModal: true})}
                             >
                                 <FormattedMessage
@@ -460,7 +458,6 @@ export default class ChannelHeader extends React.Component {
                     >
                         <a
                             role='menuitem'
-                            href='#'
                             onClick={() => this.setState({showEditChannelPurposeModal: true})}
                         >
                             <FormattedMessage
@@ -481,7 +478,6 @@ export default class ChannelHeader extends React.Component {
                     >
                         <a
                             role='menuitem'
-                            href='#'
                             onClick={this.showRenameChannelModal}
                         >
                             <FormattedMessage
@@ -511,7 +507,6 @@ export default class ChannelHeader extends React.Component {
                     >
                         <a
                             role='menuitem'
-                            href='#'
                             onClick={this.handleLeave}
                         >
                             <FormattedMessage
@@ -539,7 +534,6 @@ export default class ChannelHeader extends React.Component {
                                 <div className='channel-header__info'>
                                     <div className='dropdown'>
                                         <a
-                                            href='#'
                                             className='dropdown-toggle theme'
                                             type='button'
                                             id='channel_header_dropdown'
@@ -583,7 +577,6 @@ export default class ChannelHeader extends React.Component {
                                         overlay={recentMentionsTooltip}
                                     >
                                         <a
-                                            href='#'
                                             type='button'
                                             onClick={this.searchMentions}
                                         >

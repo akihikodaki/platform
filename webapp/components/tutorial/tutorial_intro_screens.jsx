@@ -40,7 +40,7 @@ export default class TutorialIntroScreens extends React.Component {
             return;
         }
 
-        browserHistory.push(TeamStore.getCurrentTeamUrl() + '/channels/town-square');
+        browserHistory.push(TeamStore.getCurrentTeamRelativeUrl() + '/channels/town-square');
 
         const step = PreferenceStore.getInt(Preferences.TUTORIAL_STEP, UserStore.getCurrentId(), 0);
 
@@ -59,7 +59,7 @@ export default class TutorialIntroScreens extends React.Component {
             '999'
         );
 
-        browserHistory.push(TeamStore.getCurrentTeamUrl() + '/channels/town-square');
+        browserHistory.push(TeamStore.getCurrentTeamRelativeUrl() + '/channels/town-square');
     }
     createScreen() {
         switch (this.state.currentScreen) {
@@ -113,7 +113,6 @@ export default class TutorialIntroScreens extends React.Component {
                 inviteModalLink = (
                     <a
                         className='intro-links'
-                        href='#'
                         onClick={GlobalActions.showInviteMemberModal}
                     >
                         <FormattedMessage
@@ -126,7 +125,6 @@ export default class TutorialIntroScreens extends React.Component {
                 inviteModalLink = (
                     <a
                         className='intro-links'
-                        href='#'
                         onClick={GlobalActions.showGetTeamInviteLinkModal}
                     >
                         <FormattedMessage
@@ -206,7 +204,6 @@ export default class TutorialIntroScreens extends React.Component {
 
             circles.push(
                 <a
-                    href='#'
                     key={'circle' + i}
                     className={className}
                     onClick={(e) => { //eslint-disable-line no-loop-func
@@ -244,7 +241,6 @@ export default class TutorialIntroScreens extends React.Component {
                             </button>
                             <a
                                 className='tutorial-skip'
-                                href='#'
                                 onClick={this.skipTutorial}
                             >
                                 <FormattedMessage
